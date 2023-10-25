@@ -19,6 +19,7 @@ namespace KTDashPageObject
         public By loginBtn2 = By.XPath("/html/body/div[2]/form/button");
         public By titleWelcome = By.XPath("/html/body/div[20]/h1");
         public By cancelInstallBtn = By.XPath("//*[@id='installmodal']/div/div/div[3]/button[1]");
+        public By newRosterDefault = By.XPath("//a[contains(text(), 'new roster')]");
      
     }
 
