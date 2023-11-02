@@ -32,11 +32,26 @@ namespace KTDash_Automation
             //Names should default into their role. Run a loop to check that the operative name
             //autofills operative role as the operative name when adding an operative
 
-            basePage.WaitForElement(KTPO.newRosterDefault, 10);
-            basePage.Click(KTPO.newRosterDefault);
-            //MAKE SCRIPT TO CREATE NEW ROSTER
+            //Change setting to turn off random name generation for operatives
+            basePage.WaitForElement(KTPO.settingsBtn, 10);
             basePage.Click(KTPO.settingsBtn);
             basePage.Click(KTPO.randomOpNameOffBtn);
+            basePage.Click(KTPO.myRostersBtn);
+
+            //Create Roster
+            basePage.WaitForElement(KTPO.newRosterDefault, 10);
+            basePage.Click(KTPO.newRosterDefault);
+            basePage.WaitForElement(KTPO.newRosterName, 10); 
+            basePage.SendText(KTPO.newRosterName, "Test Team 1");
+            basePage.Click(KTPO.factionChaos);
+            basePage.Click(KTPO.killteamLegionaries);
+            basePage.Click(KTPO.createRosterBtn);
+            //Add an operative
+            basePage.Click(KTPO.addOperativeDefault);
+            //Iterate through drop-down operative and assert that their type equals the operative name
+
+            //Delete roster to avoid accumulating data
+            
             Assert.Pass();
         }
 
