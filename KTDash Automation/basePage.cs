@@ -38,6 +38,11 @@ namespace BasePage
             {
             driver.FindElement(locator).Click();
             }
+        //public string GetList(By locator)
+        //    {
+         //   Array list = driver.FindElements(locator);
+
+            }
         public void CloseBrowser()
             {
             driver.Quit();

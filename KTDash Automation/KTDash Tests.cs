@@ -47,11 +47,13 @@ namespace KTDash_Automation
             basePage.Click(KTPO.killteamLegionaries);
             basePage.Click(KTPO.createRosterBtn);
             //Add an operative
+            basePage.WaitForElement(KTPO.addOperativeDefault, 10);
             basePage.Click(KTPO.addOperativeDefault);
             //Iterate through drop-down operative and assert that their type equals the operative name
-
+            //Array operativesList = basePage.GetText(KTPO.operativesFromList);
+            //Console.Write(operativesList);
             //Delete roster to avoid accumulating data
-            
+
             Assert.Pass();
         }
 

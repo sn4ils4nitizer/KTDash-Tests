@@ -31,6 +31,7 @@ namespace KTDashPageObject
 
         //Roster Editing
         public By addOperativeDefault = By.XPath("//a[contains(text(), 'add one now')]");
+        public By operativesFromList = By.XPath("//@ng-value");
 
         //Top right menu buttons
         public By settingsBtn = By.XPath("//*[@id='navbarNav']/ul/li[6]/a");
