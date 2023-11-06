@@ -41,7 +41,7 @@ namespace KTDash_Automation
             //Create Roster
             basePage.WaitForElement(KTPO.newRosterDefault, 10);
             basePage.Click(KTPO.newRosterDefault);
-            basePage.WaitForElement(KTPO.newRosterName, 10); 
+            basePage.WaitForElement(KTPO.newRosterName, 10);
             basePage.SendText(KTPO.newRosterName, "Test Team 1");
             basePage.Click(KTPO.factionChaos);
             basePage.Click(KTPO.killteamLegionaries);
@@ -50,8 +50,17 @@ namespace KTDash_Automation
             //Add an operative
             basePage.WaitForElement(KTPO.addOperativeDefault, 10);
             basePage.Click(KTPO.addOperativeDefault);
+
             //Iterate through drop-down operative and assert that their type equals the operative name
-            //Array operativesList = basePage.GetText(KTPO.operativesFromList);
+            var operativesList = new[]
+            { basePage.GetText(KTPO.operativesFromList) };
+
+            operativesList.ToList().ForEach(i => Console.WriteLine(i.ToString()));
+
+            foreach (var item in operativesList)
+            {
+                Console.WriteLine(item.ToString());
+            }
             //Console.Write(operativesList);
 
 
