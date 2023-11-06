@@ -42,7 +42,7 @@ namespace BasePage
         //    {
          //   Array list = driver.FindElements(locator);
 
-            }
+          //  }
         public void CloseBrowser()
             {
             driver.Quit();
